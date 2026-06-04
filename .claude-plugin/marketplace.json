@@ -1,0 +1,22 @@
+{
+  "name": "topoglyph",
+  "owner": {
+    "name": "Zach Wild",
+    "url": "https://github.com/xyzcoordinate"
+  },
+  "plugins": [
+    {
+      "name": "topoglyph",
+      "source": "./",
+      "description": "TopoGlyph base reference (versions 1.0-8.0), skills (topoglyph-extend, topoglyph-save-module, topoglyph-save-example, topoglyph-create-agent), and agents (topoglyph-agent, cooperative-planner).",
+      "version": "1.0.0",
+      "author": {
+        "name": "Zach Wild"
+      },
+      "homepage": "https://github.com/xyzcoordinate/TopoGlyph",
+      "repository": "https://github.com/xyzcoordinate/TopoGlyph",
+      "license": "Unlicense",
+      "keywords": ["topoglyph", "cognitive-modeling", "dsl", "topology"]
+    }
+  ]
+}
