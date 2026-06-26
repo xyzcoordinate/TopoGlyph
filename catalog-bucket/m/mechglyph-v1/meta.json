@@ -1,0 +1,27 @@
+{
+  "id": "mechglyph-v1",
+  "title": "MechGlyph: A Constraint-Topology Module for Simple Machines",
+  "type": "module",
+  "topoglyph_version": null,
+  "summary": "",
+  "tags": [
+    "mechglyph",
+    "constraint-topology",
+    "simple",
+    "machines",
+    "mechanical-engineering"
+  ],
+  "symbols": [],
+  "domain": "other",
+  "category": "mech-eng",
+  "generator": "claude-opus-4.8",
+  "provenance": {
+    "source": "mechglyph-v1.md",
+    "created_at": null
+  },
+  "refs": [
+    "topoglyph"
+  ],
+  "derives_from": [],
+  "parent": null
+}

@@ -1,0 +1,23 @@
+{
+  "id": "application-design-comprehension",
+  "title": "TopoGlyph 9.0: Application Design Comprehension",
+  "type": "module",
+  "topoglyph_version": "9.0",
+  "summary": "A TopoGlyph extension for the cognitive task of reverse-building a mental model of an existing software system from artifacts of unequal authority and unequal staleness.",
+  "tags": [
+    "application",
+    "comprehension",
+    "software-engineering"
+  ],
+  "symbols": [],
+  "domain": "other",
+  "category": "soft-eng",
+  "generator": "claude-opus-4.8",
+  "provenance": {
+    "source": "application-design-comprehension.md",
+    "created_at": null
+  },
+  "refs": [],
+  "derives_from": [],
+  "parent": null
+}

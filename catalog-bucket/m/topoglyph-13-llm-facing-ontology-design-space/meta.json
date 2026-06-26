@@ -1,0 +1,29 @@
+{
+  "id": "topoglyph-13-llm-facing-ontology-design-space",
+  "title": "TopoGlyph 13 — LLM-Facing Ontology Design Space",
+  "type": "module",
+  "topoglyph_version": "13.0",
+  "summary": "A vocabulary for navigating the design choices when building an ontology whose primary consumer is an LLM (not a human, not a database query planner).",
+  "tags": [
+    "llm-facing",
+    "ontology",
+    "space"
+  ],
+  "symbols": [],
+  "domain": "other",
+  "category": "lang-onto",
+  "generator": "claude-opus-4.8",
+  "provenance": {
+    "source": "topoglyph-13-llm-facing-ontology-design-space.md",
+    "created_at": "2026-05-23"
+  },
+  "refs": [
+    "topoglyph",
+    "application-design-comprehension",
+    "topoglyph-9-1-onto-operational-form",
+    "graph-schema-and-enrichment",
+    "topoglyph-12-ontology-comparison"
+  ],
+  "derives_from": [],
+  "parent": null
+}

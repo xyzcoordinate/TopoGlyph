@@ -1,0 +1,26 @@
+{
+  "id": "topoglyph-9-asymmetric-human-ai-collaboration",
+  "title": "TopoGlyph 9 — Asymmetric Human–AI Cognitive Partnership",
+  "type": "module",
+  "topoglyph_version": "9.0",
+  "summary": "A module for the cognitive topology of *one human and one AI agent collaboratively producing software artifacts*, where the agent runs inside a context-bounded harness (Claude Code or similar) and the human carries durable tacit context that never gets fully serialized.",
+  "tags": [
+    "asymmetric",
+    "human",
+    "cognitive",
+    "partnership"
+  ],
+  "symbols": [],
+  "domain": "other",
+  "category": "agent-collab",
+  "generator": "claude-opus-4.8",
+  "provenance": {
+    "source": "topoglyph-9-asymmetric-human-ai-collaboration.md",
+    "created_at": "2026-05-17"
+  },
+  "refs": [
+    "topoglyph"
+  ],
+  "derives_from": [],
+  "parent": null
+}

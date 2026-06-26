@@ -1,0 +1,27 @@
+{
+  "id": "topoglyph-12-ontology-comparison",
+  "title": "TopoGlyph 12 — Ontology Comparison and Projection",
+  "type": "module",
+  "topoglyph_version": "12.0",
+  "summary": "Treats a planning ontology as a closed graph of node kinds + edge kinds, with each concept articulated at one of three levels: implicit, property, or node.",
+  "tags": [
+    "ontology",
+    "comparison",
+    "projection"
+  ],
+  "symbols": [],
+  "domain": "other",
+  "category": "lang-onto",
+  "generator": "claude-opus-4.8",
+  "provenance": {
+    "source": "topoglyph-12-ontology-comparison.md",
+    "created_at": "2026-05-17"
+  },
+  "refs": [
+    "topoglyph",
+    "topoglyph-9-1-onto-operational-form",
+    "graph-schema-and-enrichment"
+  ],
+  "derives_from": [],
+  "parent": null
+}

@@ -1,0 +1,23 @@
+{
+  "id": "documentation-topology",
+  "title": "TopoGlyph 10.0: Documentation Topology",
+  "type": "module",
+  "topoglyph_version": "10.0",
+  "summary": "A TopoGlyph extension for designing and growing a /design directory of markdown that documents an application's implementation, features, and design — and continues to evolve as the codebase and understanding both change.",
+  "tags": [
+    "documentation",
+    "topology",
+    "software-engineering"
+  ],
+  "symbols": [],
+  "domain": "other",
+  "category": "soft-eng",
+  "generator": "claude-opus-4.8",
+  "provenance": {
+    "source": "documentation-topology.md",
+    "created_at": null
+  },
+  "refs": [],
+  "derives_from": [],
+  "parent": null
+}

@@ -1,0 +1,86 @@
+{
+  "id": "topoglyph-11-mechanism",
+  "title": "TopoGlyph 11.0: The Mechanism Module — Statics & Dynamics of Simple Machines",
+  "type": "module",
+  "topoglyph_version": "11.0",
+  "summary": "One module in two parts. Part I (Statics) treats a simple machine as a constraint manifold that re-parameterizes a force field while conserving work — the six classical machines collapse to two families under one operator ⇋. Part II (Dynamics) adds energy stores, inertia, and a time axis: machines now store and exchange energy (⇌ₑ), and an escapement ⊺ divides time exactly as a lever divides force. Applications work the dynamic machines and three generative inventions.",
+  "prompt": "Extend TopoGlyph to develop a framework of simple mechanical machines — then push it toward dynamic machines (springs, flywheels, escapements), fusing the two into a single Mechanism module.",
+  "applications": [
+    {
+      "title": "Spring–mass oscillator (the atom of dynamics)",
+      "prompt": "Using the Dynamics half of the Mechanism module, express the simplest possible oscillator — the irreducible unit every dynamic machine is built from — and give its governing law.",
+      "response": "```\nⓀ⟨μ⟩  ⇌ₑ  Ⓢ⟨k⟩\n        ⊾φ : KE peaks when PE = 0 (90° apart)\n        ω₀ = √(k/μ)\n        E = KE + PE ≡ const        (if ⊘d = 0)\n        ⊘d ⟹ ↘e^(−ζt)              amplitude decays\n```\n\n**What it is.** A mass on a spring — the irreducible unit of every dynamic machine.\nEnergy sloshes back and forth between the kinetic store `Ⓚ` and the elastic store\n`Ⓢ` once per `↻ᵗ`, perfectly out of phase (`⊾φ`).\n\n**Law.** `ω₀ = √(k/μ)` — frequency rises with stiffness, falls with inertia. Total\nenergy is conserved only when damping `⊘d` is absent; real springs decay as\n`↘e^(−ζt)`.\n\n**Glyphs exercised.** `Ⓚ ⇌ₑ Ⓢ` (the central dynamic operator), `⊾φ`, `ω₀`, `⊘d`.\n\n**Insight.** This is the dynamic counterpart of the bare lever in 11.0: the\nsmallest expression in which the module's defining operator (`⇌ₑ`) appears. Every\nclock, engine, and resonator is a decorated spring–mass oscillator."
+    },
+    {
+      "title": "Pendulum (Ⓢ ⥇ Ⓖ substrate isomorphism)",
+      "prompt": "Apply the module to a pendulum. Show it as the *same* exchange operator as the spring–mass oscillator with the elastic store swapped for a gravitational one, and say why that isomorphism matters.",
+      "response": "```\nⒼ⟨mgh⟩  ⇌ₑ  Ⓚ⟨½Iω²⟩\n        ω₀ = √(g/L)        — frequency set by length, NOT amplitude\n```\n\n**What it is.** A bob swinging under gravity. Same exchange operator `⇌ₑ` as the\nspring–mass oscillator, but the elastic store `Ⓢ` is replaced by a gravitational\nstore `Ⓖ`.\n\n**Law.** `ω₀ = √(g/L)` — period depends only on length (and `g`), independent of\namplitude for small swings. That amplitude-independence is *why* a pendulum can\nkeep time.\n\n**Glyphs exercised.** `Ⓖ ⇌ₑ Ⓚ`, `ω₀`.\n\n**Insight.** The isomorphism `Ⓢ ⥇ Ⓖ` (elastic ≅ gravitational store) means the\noscillator pattern is substrate-independent — the same `⇌ₑ` machine works whether\nthe restoring force comes from a spring or from gravity. This `⥇` (the\nisomorphism-detector from TopoGlyph 3.0) is what let Galileo turn a swinging lamp\ninto a clock."
+    },
+    {
+      "title": "Flywheel (the kinetic capacitor)",
+      "prompt": "Model a flywheel with the module and explain, via a `⥇` isomorphism, what it does to a fluctuating input torque.",
+      "response": "```\n►⟨τ ripple⟩ → Ⓚ⟨I large⟩ → ◄⟨τ smooth⟩\n   ⊿Q high ⟹ stores through the gaps between power strokes\n```\n\n**What it is.** A heavy spinning disk on a shaft. It absorbs an engine's lumpy\npower strokes into its kinetic store `Ⓚ` and pays them back smoothly — a buffer\nfor rotational energy.\n\n**Law.** `KE = ½Iω²`. A large moment of inertia `I` (= large `μ`) makes `ω`\nchange slowly under fluctuating torque, smoothing `τ ripple` into `τ smooth`.\n\n**Glyphs exercised.** `Ⓚ`, `μ`/`I`, `⊿Q`.\n\n**Insight.** A flywheel is a **low-pass filter for torque** — flywheel :\ntorque-ripple :: capacitor : voltage-ripple. This `⥇` carries the storage concept\nstraight across into electronics, and shows that `Ⓚ` is not just \"a moving mass\"\nbut a *reservoir with filtering behavior*."
+    },
+    {
+      "title": "Escapement (the machine that divides time)",
+      "prompt": "Derive the escapement from the gating operator `⊺` over an oscillator, and explain in the notation how a mechanical clock manages to keep time.",
+      "response": "```\nⓈ⟨mainspring⟩ ──⊺── gear train          mainspring wants to dump energy...\n                │\n            Ⓚ⇌ₑⓈ  (balance wheel / pendulum)   ...but ⊺ only lets one tooth pass per ↻ᵗ\n\n   each ↻ᵗ:  oscillator unlocks ⊺  AND  ⊺ gives oscillator a push that replaces ⊘d\n   ⟹ self-sustaining oscillation;  rate set by ω₀, (mostly) immune to ⟨mainspring⟩\n```\n\n**What it is.** The keystone dynamic machine — the heart of every mechanical clock.\nA store `Ⓢ` (mainspring or driving weight) is metered out one tooth per cycle by a\ngate `⊺`, which is unlocked by an oscillator (`Ⓚ⇌ₑⓈ` balance wheel, or pendulum).\n\n**Law.** Each `↻ᵗ` the oscillator releases the gate **and** receives an impulse\nthrough it that exactly cancels its damping `⊘d`. The result is a self-sustaining\noscillation whose rate is set by the oscillator's `ω₀`, not by the drive. High\n`⊿Q` ⟹ the rate barely depends on the push ⟹ the clock keeps time.\n\n**Glyphs exercised.** `⊺` (escapement gate), `Ⓢ`, `Ⓚ⇌ₑⓈ`, `⊘d`, `⊿Q`, `↻ᵗ`.\n\n**Insight.** The escapement is to **time** what the lever is to **force**: it\nquantizes a continuous flow of a conserved quantity through a constraint. The\nlever's constraint is spatial (`△`); the escapement's is temporal (`⊺`). \"A clock\nis a machine for dividing time\" is the exact `⥇` of \"a lever is a machine for\ndividing force.\""
+    },
+    {
+      "title": "Governor (regulation by feedback)",
+      "prompt": "Express Watt's centrifugal governor and show it reusing the negative-feedback element `⟰` minted back in TopoGlyph 5.0.",
+      "response": "```\nω↑ ⟹ Ⓚ⟨flyballs⟩ rise ⟹ ⟰ throttle ⟹ energy in ↓ ⟹ ω held at ⌌set⌍\n```\n\n**What it is.** Watt's centrifugal governor. Spinning flyballs rise as angular\nspeed `ω` increases; their rise mechanically closes a throttle, cutting energy\ninput and pulling `ω` back toward a set point.\n\n**Law.** A negative-feedback loop: deviation of `ω` from `⌌set⌍` produces a\ncorrection opposing the deviation. Stable regulation when loop gain and lag keep\nthe system inside its `⍭` (dynamic stability range, from TopoGlyph 5.0).\n\n**Glyphs exercised.** `Ⓚ`, `⟰` (negative feedback, inherited from 5.0), `⌌set⌍`.\n\n**Insight.** The governor shows the Dynamics Module composing directly with the\ncognitive-feedback layer (5.0): `⟰` was minted to describe stabilizing cognition,\nand here it is realized in pure mechanism. Regulation is substrate-independent —\nthe same feedback topology governs an engine, a thermostat, and a homeostatic\ncell."
+    },
+    {
+      "title": "Trebuchet (M3 cross-module fuse)",
+      "prompt": "Use the generative move-set: fuse a Part I lever with Part II energy stores (move M3) to derive the trebuchet, and explain what it reveals about the 3rd-class lever from the statics half.",
+      "response": "Generated by composing an 11.0 lever with 11.0-D energy stores:\n\n```\nⒼ⟨counterweight⟩ ──►══△══◄── Ⓚ⟨projectile⟩      3rd-class geometry on the load arm\n   Ⓖ → ⇌ₑ → Ⓚ ,  long arm ⟹ ⊿MA<1 ⟹ trades force for VELOCITY\n```\n\n**What it is.** A gravitational store `Ⓖ` (heavy counterweight) drops, driving a\nlever whose long throwing arm converts the slow heavy fall into a fast light\nprojectile (`Ⓚ`).\n\n**Derivation.** The static module (11.0) found that a 3rd-class lever \"spends force\nto buy speed\" (`⊿MA < 1`) and left open *what that is for*. The Dynamics Module\nanswers: a **projectile launcher**. You *want* `⊿MA < 1` here because you are\nconverting a slow, heavy `Ⓖ` drop into a fast, light `Ⓚ` throw — velocity is the\ngoal, not force.\n\n**Glyphs exercised.** `Ⓖ → ⇌ₑ → Ⓚ`, lever `►══△══◄`, `⊿MA<1`.\n\n**Insight.** The trebuchet is the 3rd-class lever's *reason to exist*. It is a true\ncross-module machine: the geometry comes from 11.0, the energy conversion from\n11.0-D, and only together do they explain the device."
+    },
+    {
+      "title": "Horology tree (M4 gap-fill by oscillator swap)",
+      "prompt": "Apply the gap-fill move M4: hold the escapement gate `⊺` fixed and swap the oscillator under it. Show the family of timekeepers the algebra generates.",
+      "response": "The escapement is the operator `⊺` applied over *any* oscillator `Ⓚ⇌ₑⓈ`. Vary the\noscillator and the same machine generates an entire family:\n\n```\n⊺ over  Ⓖ⇌ₑⓀ  (pendulum)        → tower / longcase clock      ω₀ = √(g/L)\n⊺ over  Ⓚ⇌ₑⓈ  (balance + hairspring) → portable watch         ω₀ = √(k/I)\n⊺ over  Ⓚ⇌ₑⓈ  (tuning fork)     → Accutron / high-Q timepiece  ω₀ high, ⊿Q very high\n```\n\n**What it is.** Not one machine but a generated *class* — every mechanical\ntimekeeper is the same `⊺`-gate over a different `ω₀` source.\n\n**Derivation.** Gap-fill move (M4): hold the gate `⊺` fixed and substitute the\noscillator. Each substitution is a known device, recovered (not recalled) from the\nalgebra — validating that `⊺` is genuinely the timekeeping primitive.\n\n**Glyphs exercised.** `⊺`, `Ⓖ⇌ₑⓀ` / `Ⓚ⇌ₑⓈ`, `ω₀`, `⊿Q`.\n\n**Insight.** Higher `ω₀` and higher `⊿Q` both improve precision — more beats per\nsecond, each less perturbed by the drive. The tuning fork wins on both, which is\nwhy it kept better time than any pendulum: the notation predicts the ranking\nbefore you measure it."
+    },
+    {
+      "title": "Hydraulic ram pump (M5 substrate swap)",
+      "prompt": "Apply the substrate-swap move M5: take the oscillate-and-gate pattern (`⇌ₑ` + `⊺`) that defines the escapement and put it on a fluid. Identify the machine it predicts.",
+      "response": "Energy oscillation `⇌ₑ` applied to a fluid column, gated by a check valve `⊺`:\n\n```\nⓀ⟨moving water⟩  ⇌ₑ  Ⓖ⟨head⟩      gated by check valve ⊺ (water-hammer pulse)\n   each ↻ᵗ: flow builds Ⓚ → ⊺ slams shut → pressure spike lifts a fraction to Ⓖ\n   no external power; driven by the source flow itself\n```\n\n**What it is.** A pump with no motor. A steady supply flow is allowed to accelerate\n(building kinetic store `Ⓚ`); a check valve `⊺` then slams shut, and the\nwater-hammer pressure spike lifts a small fraction of the water to a height (a\ngravitational store `Ⓖ`). It cycles automatically.\n\n**Derivation.** Substrate-swap move (M5): take the \"oscillate-and-gate\" pattern\n(`⇌ₑ` + `⊺`) that defines the escapement and apply it to a fluid instead of a rigid\noscillator. The notation predicts a self-driven pulse pump before you name it.\n\n**Glyphs exercised.** `Ⓚ ⇌ₑ Ⓖ`, `⊺` (now a check valve), `↻ᵗ`.\n\n**Insight.** The escapement and the ram pump are the *same machine* — a gated\noscillator — in two substrates (rigid vs. fluid). It confirms the module's central\nclaim that `⇌ₑ` and `⊺` are substrate-independent operators, exactly as `⇋` was in\nthe static module."
+    }
+  ],
+  "tags": [
+    "mechanism",
+    "simple-machines",
+    "dynamics",
+    "force",
+    "energy",
+    "constraint",
+    "mechanical-engineering"
+  ],
+  "symbols": [
+    "⇋",
+    "⊿MA",
+    "△",
+    "╱",
+    "◢",
+    "⌇",
+    "⊻",
+    "Ⓚ",
+    "Ⓢ",
+    "Ⓖ",
+    "⇌ₑ",
+    "⊺",
+    "⊿Q"
+  ],
+  "domain": "science",
+  "category": "mech-eng",
+  "generator": "claude-opus-4.8",
+  "provenance": {
+    "source": "topoglyph-mechanism.md",
+    "created_at": "2026-06-24"
+  },
+  "refs": [
+    "topoglyph"
+  ],
+  "derives_from": [],
+  "parent": null
+}

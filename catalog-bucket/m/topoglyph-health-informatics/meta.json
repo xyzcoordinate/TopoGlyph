@@ -1,0 +1,26 @@
+{
+  "id": "topoglyph-health-informatics",
+  "title": "TopoGlyph 10.0: Health Informatics Substrate Module",
+  "type": "module",
+  "topoglyph_version": "10.0",
+  "summary": "A domain extension for representing the *data and information topology* of health informatics systems — the layered standards (FHIR, OMOP, openEHR, Phenopackets), terminology graphs (SNOMED/RxNorm/LOINC/HPO via UMLS), evidence representations (EBMonFHIR, GRADE, EvidenceMap), know…",
+  "prompt": null,
+  "tags": [
+    "health-informatics",
+    "clinical-data",
+    "interoperability",
+    "fhir",
+    "terminology"
+  ],
+  "symbols": [],
+  "domain": "science",
+  "category": "health-info",
+  "generator": "claude",
+  "provenance": {
+    "source": "topoglyph-health-informatics.md",
+    "created_at": null
+  },
+  "refs": [],
+  "derives_from": [],
+  "parent": null
+}

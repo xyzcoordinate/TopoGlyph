@@ -1,0 +1,47 @@
+{
+  "id": "tg-9-bibliographic",
+  "title": "Bibliographic Module — A Library Catalog for TopoGlyph Modules",
+  "type": "module",
+  "topoglyph_version": "9.0",
+  "summary": "Symbols and a concrete catalog schema for storing, classifying, and recalling TopoGlyph modules. The reflexive module the library itself runs on — its first accessioned record.",
+  "tags": [
+    "catalog",
+    "retrieval",
+    "provenance",
+    "classification",
+    "self-reference",
+    "library",
+    "information-science"
+  ],
+  "symbols": [
+    "⊏■⊐",
+    "※",
+    "⊰ ⊱",
+    "⊪",
+    "⊩",
+    "⊨",
+    "⊞ᵢ",
+    "⫷ ⫸",
+    "⟜?",
+    "⥇ₘ",
+    "↰",
+    "⊕ₗ",
+    "⥶ₗ",
+    "⊘ₐ"
+  ],
+  "domain": "meta",
+  "category": "info-sci",
+  "generator": "claude-opus-4.8",
+  "provenance": {
+    "conversation": "TopoGlyph catalog design, 2026-06-24",
+    "created_at": "2026-06-24"
+  },
+  "refs": [
+    "topoglyph.md",
+    "tg-2-integration"
+  ],
+  "derives_from": [
+    "tg-2-integration"
+  ],
+  "parent": null
+}

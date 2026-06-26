@@ -1,0 +1,27 @@
+{
+  "id": "knowledge-library-v1",
+  "title": "TopoGlyph 9.0: The Knowledge Library Problem",
+  "type": "module",
+  "topoglyph_version": "9.0",
+  "summary": "Drawing from information science, library science, information architecture, and software engineering to model the problem of building a living knowledge library for a software project.",
+  "tags": [
+    "knowledge",
+    "library",
+    "problem",
+    "information-science"
+  ],
+  "symbols": [],
+  "domain": "other",
+  "category": "info-sci",
+  "generator": "claude-opus-4.8",
+  "provenance": {
+    "source": "knowledge-library.md",
+    "created_at": null
+  },
+  "refs": [
+    "topoglyph-v0",
+    "documentation-topology"
+  ],
+  "derives_from": [],
+  "parent": null
+}

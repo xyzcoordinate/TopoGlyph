@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://topoglyph.example/schema.json",
+  "title": "TopoGlyph Catalog Record",
+  "description": "One record per module. Authored fields live in m/<id>/meta.json; build-index.mjs derives content_url, glyph_url, and hash.",
+  "type": "object",
+  "required": ["id", "title", "type", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "Stable call number (※). Also the folder name under m/."
+    },
+    "title": { "type": "string" },
+    "type": {
+      "type": "string",
+      "enum": ["module", "prompt", "artifact", "expression"],
+      "description": "module = a TopoGlyph extension; prompt = a reusable prompt; artifact = a conversation output; expression = a standalone glyph."
+    },
+    "topoglyph_version": {
+      "type": "string",
+      "description": "Which TopoGlyph version/symbol set this module defines or assumes, e.g. \"9.0\"."
+    },
+    "summary": { "type": "string", "description": "One or two sentences for index listings." },
+    "prompt": { "type": ["string", "null"], "description": "The prompt used to produce this module (markdown). Absent or null means 'not recorded'." },
+    "applications": {
+      "type": "array",
+      "description": "Worked uses of the module. Each application is the prompt given to the model and the response it produced. Rendered under the library reader's Applications tab.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["prompt", "response"],
+        "properties": {
+          "title": { "type": "string", "description": "Optional label for this application." },
+          "prompt": { "type": "string", "description": "The prompt given to the model (markdown)." },
+          "response": { "type": "string", "description": "The model's response (markdown)." }
+        }
+      }
+    },
+    "tags": { "type": "array", "items": { "type": "string" }, "description": "Subject descriptors (⊺)." },
+    "symbols": { "type": "array", "items": { "type": "string" }, "description": "Glyphs introduced or relied on (⊞ᵢ index keys)." },
+    "domain": { "type": "string", "description": "Classification facet (⫷domain⫸): science, art, math, meta, ..." },
+    "category": { "type": "string", "description": "Primary subject category code (arxiv-style) used to group the module in the library, e.g. \"mech-eng\". The authoritative ordered taxonomy (code → display name) lives in tools/build-index.mjs and is emitted into index.json as `categories`." },
+    "generator": {
+      "type": "string",
+      "description": "What produced this artifact, e.g. \"fugu\", \"fugu-ultra\", \"claude-opus-4.8\". Honest provenance (⊪)."
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "conversation": { "type": "string" },
+        "created_at": { "type": "string", "description": "YYYY-MM-DD" }
+      }
+    },
+    "refs": { "type": "array", "items": { "type": "string" }, "description": "Related module ids/paths (∝ cites)." },
+    "derives_from": { "type": "array", "items": { "type": "string" }, "description": "Module ids this one reuses/refines (⊑)." },
+    "parent": { "type": ["string", "null"], "description": "Predecessor record id for a revision (⊩)." },
+    "content_url": { "type": "string", "description": "Derived by build-index: path to module.md." },
+    "glyph_url": { "type": "string", "description": "Derived by build-index: path to glyph.txt if present." },
+    "hash": { "type": "string", "description": "Derived by build-index: sha256 of module.md (⊨ integrity seal)." }
+  }
+}

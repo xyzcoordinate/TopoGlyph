@@ -1,0 +1,38 @@
+# TopoGlyph Module Library
+
+> A public library of TopoGlyph modules — prompts and conversation artifacts
+> generated with the Sakana Fugu model. Each module is plain markdown you can
+> fetch and inject into context to bootstrap TopoGlyph reasoning.
+
+Machine index: /index.json  ·  Record schema: /schema.json  ·  Updated: 2026-06-26
+
+## Read this first (required)
+
+**Before reading ANY module, read the language core: [topoglyph.md](/topoglyph.md).**
+
+Every module below is an *extension* of the core — it introduces new glyphs and
+assumes you already know the base vocabulary, syntax, and reading rules defined in
+the core. Reading a module without the core first will mislead you: the symbols will
+look arbitrary and the topological reading will not parse. The core is the same text
+held immutably on-chain (Ethereum token #2); this copy is mirrored here so you do not
+have to read the chain.
+
+## Modules
+
+Read after the core. Each builds on it (see each record's `derives_from` for deeper chains).
+- [Bibliographic Module — A Library Catalog for TopoGlyph Modules](/m/tg-9-bibliographic/module.md) — module, v9.0, Information Science & Knowledge Systems. Symbols and a concrete catalog schema for storing, classifying, and recalling TopoGlyph modules. The reflexive module the library itself runs on — its first accessioned record. Tags: catalog, retrieval, provenance, classification, self-reference, library.
+- [TopoGlyph 11.0: The Mechanism Module — Statics & Dynamics of Simple Machines](/m/topoglyph-11-mechanism/module.md) — module, v11.0, Mechanical Engineering. One module in two parts. Part I (Statics) treats a simple machine as a constraint manifold that re-parameterizes a force field while conserving work — the six classical machines collapse to two families under one operator ⇋. Part II (Dynamics) adds energy stores, inertia, and a time axis: machines now store and exchange energy (⇌ₑ), and an escapement ⊺ divides time exactly as a lever divides force. Applications work the dynamic machines and three generative inventions. Tags: mechanism, simple-machines, dynamics, force, energy, constraint.
+- [TopoGlyph 13 — LLM-Facing Ontology Design Space](/m/topoglyph-13-llm-facing-ontology-design-space/module.md) — module, v13.0, Language & Ontology Design. A vocabulary for navigating the design choices when building an ontology whose primary consumer is an LLM (not a human, not a database query planner). Tags: llm-facing, ontology, space.
+- [TopoGlyph 12 — Ontology Comparison and Projection](/m/topoglyph-12-ontology-comparison/module.md) — module, v12.0, Language & Ontology Design. Treats a planning ontology as a closed graph of node kinds + edge kinds, with each concept articulated at one of three levels: implicit, property, or node. Tags: ontology, comparison, projection.
+- [TopoGlyph 9 — Asymmetric Human–AI Cognitive Partnership](/m/topoglyph-9-asymmetric-human-ai-collaboration/module.md) — module, v9.0, Agent & Human-AI Collaboration. A module for the cognitive topology of *one human and one AI agent collaboratively producing software artifacts*, where the agent runs inside a context-bounded harness (Claude Code or similar) and the human carries durable tacit context that never gets fully serialized. Tags: asymmetric, human, cognitive, partnership.
+- [TopoGlyph 9.0: Application Design Comprehension](/m/application-design-comprehension/module.md) — module, v9.0, Software Engineering. A TopoGlyph extension for the cognitive task of reverse-building a mental model of an existing software system from artifacts of unequal authority and unequal staleness. Tags: application, comprehension, software-engineering.
+- [TopoGlyph 10.0: Documentation Topology](/m/documentation-topology/module.md) — module, v10.0, Software Engineering. A TopoGlyph extension for designing and growing a /design directory of markdown that documents an application's implementation, features, and design — and continues to evolve as the codebase and understanding both change. Tags: documentation, topology, software-engineering.
+- [TopoGlyph 9.0: The Knowledge Library Problem](/m/knowledge-library-v1/module.md) — module, v9.0, Information Science & Knowledge Systems. Drawing from information science, library science, information architecture, and software engineering to model the problem of building a living knowledge library for a software project. Tags: knowledge, library, problem, information-science.
+- [MechGlyph: A Constraint-Topology Module for Simple Machines](/m/mechglyph-v1/module.md) — module, Mechanical Engineering.  Tags: mechglyph, constraint-topology, simple, machines, mechanical-engineering.
+- [TopoGlyph 10.0: Health Informatics Substrate Module](/m/topoglyph-health-informatics/module.md) — module, v10.0, Health Informatics. A domain extension for representing the *data and information topology* of health informatics systems — the layered standards (FHIR, OMOP, openEHR, Phenopackets), terminology graphs (SNOMED/RxNorm/LOINC/HPO via UMLS), evidence representations (EBMonFHIR, GRADE, EvidenceMap), know… Tags: health-informatics, clinical-data, interoperability, fhir, terminology.
+
+## How to use (for LLMs)
+1. GET /topoglyph.md — read the core first; inject it into context.
+2. GET /index.json — find modules by `tags`, `symbols`, `domain`, or `topoglyph_version`.
+3. GET a module's `content_url` — inject the markdown on top of the core.
+4. To compose, fetch two modules and integrate them (the ⊕ₗ operation).
